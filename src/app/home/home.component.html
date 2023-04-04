@@ -1,0 +1,55 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found
+  [visible]="!foods || foods.length <= 0"
+  resetLinkText="Fazer uma Nova Busca!"
+></app-not-found>
+<ul fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="space-around center">
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{ food.id }}">
+      <img src="{{ food.imageUrl }}" />
+
+      <div class="content">
+        <div fxLayoutGap="100px" class="name">{{ food.name }}</div>
+
+        <div *ngIf="food.favorite" fxLayoutAlign="end end" class="favorite">
+          <mat-icon>favorite</mat-icon>
+        </div>
+
+        <div
+          fxLayoutAlign="start"
+          [ngClass]="{ star_favorite: food.favorite }"
+          class="stars"
+        >
+          <star-rating
+            [value]="food.stars"
+            [totalstars]="5"
+            checkedcolor="red"
+            uncheckedcolor="black"
+            size="18px"
+            [readonly]="true"
+          ></star-rating>
+        </div>
+
+        <div class="product-item-footer">
+          <div [ngClass]="{ origins_favorite: food.favorite }" class="origins">
+            <span *ngFor="let origin of food.origins">{{ origin }}</span>
+          </div>
+
+          <div
+            [ngClass]="{ cookTimeFavorite: food.favorite }"
+            class="cook-time"
+          >
+            <span
+              ><mat-icon class="clock">av_timer</mat-icon>
+              {{ food.cookTime }}</span
+            >
+          </div>
+        </div>
+        <div [ngClass]="{ price_favorite: food.favorite }" class="price">
+          <span>R{{ food.price | currency }}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

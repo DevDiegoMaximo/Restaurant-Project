@@ -1,0 +1,108 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a {
+  height: 23.5rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #f54049;
+}
+
+li:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.content {
+  padding: 0.5rem 1rem;
+}
+
+.favorite {
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 18px;
+  display: inline-block;
+}
+
+.stars {
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.star_favorite {
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  position: relative;
+  bottom: 22px;
+}
+
+.product-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.origins {
+  flex: 9;
+}
+
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 0.7rem;
+  color: grey;
+  margin-right: 0.3rem;
+  position: relative;
+  bottom: 5px;
+}
+
+.origins_favorite span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 0.7rem;
+  color: grey;
+  margin-right: 0.3rem;
+  position: relative;
+  bottom: 26px;
+}
+
+.cook-time {
+  font-size: 0.6rem;
+  flex: 3;
+  text-align: right;
+  color: black;
+}
+
+.cookTimeFavorite {
+  position: relative;
+  bottom: 24px;
+}
+.price {
+  color: #414141;
+  margin-top: 0.7rem;
+}
+
+.price_favorite {
+  color: #414141;
+  margin-top: 0.7rem;
+  position: relative;
+  bottom: 25px;
+}
+
+.clock {
+  position: relative;
+  top: 6px;
+}

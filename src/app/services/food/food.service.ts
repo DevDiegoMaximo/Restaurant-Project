@@ -59,7 +59,7 @@ export class FoodService {
         stars: 3.7,
         imageUrl:
           'https://my-restaurant-app-angular.s3.amazonaws.com/images/food-3.jpg',
-        tags: ['Fast-Food', 'Frituras'],
+        tags: ['Fast-Food'],
       },
 
       {
@@ -72,7 +72,7 @@ export class FoodService {
         stars: 5,
         imageUrl:
           'https://my-restaurant-app-angular.s3.amazonaws.com/images/food-4.jpg',
-        tags: ['Frituras', 'Porções', 'Fast-Food'],
+        tags: ['Porções', 'Fast-Food'],
       },
 
       {
@@ -100,7 +100,6 @@ export class FoodService {
     return [
       { name: 'Todos', count: 9 },
       { name: 'Bebidas Quentes', count: 1 },
-      { name: 'Frituras', count: 2 },
       { name: 'Porções', count: 1 },
       { name: 'Comida Italiana', count: 1 },
       { name: 'Comida Saudável', count: 2 },
